@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    /* Cores */
+    --bg-page:  #040924;
+    --bg-white: #fff;
+    --Brand-Colors-Explorer-mid: #02799D;
+
+    --tt-heading: #0c3440;
+    
+    --tt-label: #00453A;
+    --tt-input: #212529;
+    --ot-input: #02799D;
+    --bd-input: rgba(73, 80, 87, 0.3);
+    --tt-placeholder: rgba(73, 80, 87, 0.5);
+    
+    --tt-button: white;
+    --bg-input: #02799D;
+
+    --bg-error: #F03E3E;
+    --tt-error: white;
+}
+
+.container{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+body{
+    background-color: var(--bg-page);
+    font-size: 1.6rem;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.card{
+    max-width: 42.8rem;
+    margin-inline: auto;
+
+    padding: 4.8rem 6.4rem 6.4rem;
+    border-radius: .6rem;
+    background-color: var(--bg-white);
+
+    box-shadow: 0 .2rem .4rem rgba(0,0,0,0.1);
+}
+
+.card label{
+    font-size: 1.4rem;
+    
+    color: var(--brand-green-hover);
+}
+
+.card input[type='text']{
+    width: 100%;
+    padding: 1.6rem;
+    margin: .8rem 0 1.6rem 0;
+
+    border-radius: 4px;
+    border: 1px solid var(--Brand-Colors-Explorer-mid);
+    background: #DCE2E9;
+}
+
+.card button{
+    width: 100%;
+    padding: 16px;
+    margin-top: 1.6rem;
+    color: var(--bg-white);
+    background: var(--Brand-Colors-Explorer-mid);
+    
+    border: none;
+    border-radius: 4px;
+   
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    cursor: pointer;
+}
