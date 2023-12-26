@@ -168,6 +168,32 @@ form button:hover{
     transform: scale(1.1);
 }
 
+/* ALERT ERROR */
+.alert-error.open{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.alert-error{
+    background: var(--bg-error);
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    padding: .8rem 0;
+    color: var(--tt-error);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-30px);
+    transition: transform .5s;
+}
 
 @media screen and (max-width: 720px) {
     .container{
