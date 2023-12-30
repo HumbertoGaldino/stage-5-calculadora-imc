@@ -1,6 +1,6 @@
 import { Modal } from './modal.js';
 import { AlertError } from './alert-error.js';
-import { calculateIMC, notNumber } from './utils'
+import { calculateIMC, notNumber } from './utils.js'
 
 // Variáveis
 const form = document.querySelector("form");
@@ -10,6 +10,8 @@ const inputHeight = document.querySelector("#height");
 
 // Eventos
 form.onsubmit = handleSubmit;
+inputWeight.oninput = handleInput;
+inputHeight.oninput = handleInput;
 
 // Funções
 function handleSubmit(event) {
@@ -30,8 +32,6 @@ function handleSubmit(event) {
     let result = calculateIMC(weight, height);
 
     displayResultMessage(result);
-
-    
 };
 
 function displayResultMessage(result){
@@ -39,4 +39,8 @@ function displayResultMessage(result){
 
     Modal.message.innerText = message;
     Modal.open();
+}
+
+function handleInput(){
+    AlertError.close();
 }
