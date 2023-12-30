@@ -16,6 +16,13 @@ function handleSubmit(event) {
     const weight = inputWeight.value;
     const height = inputHeight.value;
 
+    const showAlertError = notNumber(weight) || notNumber(height);
+
+    if(showAlertError){
+        console.log('mostrar alerta de erro');
+        return;
+    }
+
     let result = IMC(weight, height);
 
     Modal.message.innerText = `Seu IMC é de ${result}!`;
