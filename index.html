@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="./style.css">
     
     <!-- DEFER = solicita que o script aguarde todo o carregamento do html para executar -->
-    <script src="./script.js" defer></script>
+    <script type="module" src="./js/script.js" defer></script>
     
     <title>Calculadora IMC</title>
 </head>
 <body>
     
-    <div class="alert-error open">
+    <div class="alert-error">
         Digite somente números
     </div>
 
@@ -29,7 +29,12 @@
            
                 <div class="input-wrapper">
                     <label for="weight">Peso (kg)</label>
-                    <input type="text" name="weight" id="weight" placeholder="60">
+                    <input
+                        type="text" 
+                        name="weight"
+                        id="weight"
+                        placeholder="60"
+                    />
                 </div>
     
                 <div class="input-wrapper">
@@ -42,7 +47,7 @@
                     />
                 </div>
 
-                <button type="submit">
+                <button id="submit" type="submit">
                     Calcular IMC 
                     <img src="./assets/arrow.svg" alt="seta apontando para a direita">
                 </button>
@@ -54,11 +59,12 @@
     <div class="modal-wrapper">
         <div class="modal card">
             <h2 class="title">
-
+                
                 <button class="close">
                     <img src="./assets/close.svg" alt="Imagem para fechar o PopUp">
                 </button>
-                Seu IMC é de 28
+                
+                <span>Seu imc é de 28!</span>
             </h2>
         </div>
     </div>
